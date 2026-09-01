@@ -10,4 +10,9 @@ if [ ! -f "$REAL_PATH" ]; then
     exit 1
 fi
 
-awww img "$REAL_PATH" --transition-type random --transition-fps 60 --transition-step 2 -f Bilinear --transition-duration 1
+matugen image "$REAL_PATH" --source-color-index 0 --type scheme-fidelity
+awww img "$REAL_PATH" --transition-type random --transition-fps 60 --transition-step 2 -f Bilinear --transition-duration 0.5 &
+killall -SIGUSR1 kitty
+pkill -SIGUSR1 nvim
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'

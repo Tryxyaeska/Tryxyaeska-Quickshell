@@ -2,6 +2,7 @@ import Quickshell
 import QtQuick
 import Quickshell.Io
 import QtQuick.Effects
+import Qt.labs.folderlistmodel
 import "../"
 
 Item{
@@ -38,6 +39,24 @@ Item{
             }
         }
     }
+
+    FolderListModel {
+        id: wallpaperDbReader
+        folder: "file:///home/therookie/Pictures/Wallpapers/"
+        nameFilters: ["*.jpg", "*.png", "*.jpeg", "*.gif", "*.webp"]
+        showDirs: false
+
+        onStatusChanged: {
+            if (status === FolderListModel.Ready) {
+                let papersArr = []
+                for (let i = 0; i < count; i++) {
+                    let fileLoc = get(i, "filePath").toString() 
+                    papersArr.push(fileLoc)
+                }
+                paperCenterMain.wallpaperDb = papersArr
+            }
+        }
+    }
     
     PanelWindow{
         id: paperCenterMain
@@ -47,16 +66,8 @@ Item{
         margins {
             bottom : 96
         }
-        property var wallpaperDb: [
-            "/mnt/data/Utility OG/Pictures/images.steamusercontent (9).jpg",
-            "/mnt/data/Utility OG/Pictures/images.steamusercontent (7).jpg",
-            "/mnt/data/Utility OG/Pictures/download (70) (Edited) (3).jpg",
-            "/mnt/data/Utility OG/Pictures/destiny (5).jpg",
-            "/mnt/data/Utility OG/Pictures/nierRainOptimized.jpg",
-            "/mnt/data/Utility OG/Pictures/nier-2b-gif.gif",
-            "/mnt/data/Utility OG/Pictures/halo_by_rikenz15_d6p7rqf.png",
-            "/mnt/data/Utility OG/Pictures/nier-4.jpg"
-        ]
+        property var wallpaperDb: []
+
         property int currentIndex: 0
         property int lastIndex: 0
         property int slideDirection: 1 
@@ -85,13 +96,13 @@ Item{
             }
         }
 
-        implicitWidth : visibility ? 1260 : 0
+        implicitWidth : visibility ? 1260 : 1260
         implicitHeight : visibility ? 200 : 200
-        Behavior on implicitWidth {NumberAnimation {duration: 50; easing.type: Easing.InOutBack}}
-        Behavior on implicitHeight {NumberAnimation {duration: 50; easing.type: Easing.InOutBack}}
+        Behavior on implicitWidth {NumberAnimation {duration: 120; easing.type: Easing.OutQuad}}
+        Behavior on implicitHeight {NumberAnimation {duration: 50; easing.type: Easing.OutQuad}}
         color : "transparent"
         exclusionMode : ExclusionMode.Ignore
-        
+        visible : visibility
         Timer {
             id: closeTimer
             interval: 600
@@ -234,7 +245,7 @@ Item{
             arrowRight: 1
             arrowDepth: 56
             slideDirection: paperCenterMain.slideDirection
-            imageSource: paperCenterMain.currentIndex > 0 ? paperCenterMain.wallpaperDb[paperCenterMain.currentIndex - 1] : paperCenterMain.wallpaperDb.length > 0 ? paperCenterMain.wallpaperDb[paperCenterMain.wallpaperDb.length - 1] : ""
+            imageSource: paperCenterMain.currentIndex > 0 ? "file://" + paperCenterMain.wallpaperDb[paperCenterMain.currentIndex - 1] : paperCenterMain.wallpaperDb.length > 0 ? "file://" + paperCenterMain.wallpaperDb[paperCenterMain.wallpaperDb.length - 1] : ""
             imageOpacity: leftMouse.containsMouse ? 0.9 : 0.5
             Behavior on imageOpacity{
                 NumberAnimation{
@@ -281,7 +292,7 @@ Item{
             arrowRight: -1
             arrowDepth: 56
             slideDirection: paperCenterMain.slideDirection
-            imageSource: paperCenterMain.currentIndex < paperCenterMain.wallpaperDb.length - 1 ? paperCenterMain.wallpaperDb[paperCenterMain.currentIndex + 1] : paperCenterMain.wallpaperDb.length > 0 ? paperCenterMain.wallpaperDb[0] : ""
+            imageSource: paperCenterMain.currentIndex < paperCenterMain.wallpaperDb.length - 1 ? "file://" + paperCenterMain.wallpaperDb[paperCenterMain.currentIndex + 1] : paperCenterMain.wallpaperDb.length > 0 ? "file://" + paperCenterMain.wallpaperDb[0] : ""
             imageOpacity: rightMouse.containsMouse ? 0.73 : 0.5
             Behavior on imageOpacity{
                 NumberAnimation{
@@ -328,7 +339,7 @@ Item{
             arrowRight: -1
             arrowDepth: 56
             slideDirection: paperCenterMain.slideDirection
-            imageSource: paperCenterMain.wallpaperDb.length > 0 ? paperCenterMain.wallpaperDb[paperCenterMain.currentIndex] : ""
+            imageSource: paperCenterMain.wallpaperDb.length > 0 ? "file://" + paperCenterMain.wallpaperDb[paperCenterMain.currentIndex] : ""
             imageOpacity: 1.0
 
             MouseArea{

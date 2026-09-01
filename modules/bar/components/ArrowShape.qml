@@ -23,6 +23,13 @@ Item {
 
     default property alias innerContent: container.data
 
+    Behavior on boxColor{
+        ColorAnimation{
+            duration : 200
+            easing.type : Easing.OutQuad
+        }
+    }
+
     Shape {
         anchors.fill: parent
         antialiasing: true

@@ -190,9 +190,9 @@ Item{
             top : 7
             right : 7
         }
-
-        implicitWidth : centerVisibility ? 350 : 0
-        implicitHeight : centerVisibility ? Math.min(806, centerCol.implicitHeight + 15) : 0
+        visible : centerVisibility
+        implicitWidth : centerVisibility ? 350 : 350
+        implicitHeight : Math.min(806, centerCol.implicitHeight + 15)
         Behavior on implicitWidth {NumberAnimation {duration: 50; easing.type: Easing.InOutBack}}
         Behavior on implicitHeight {NumberAnimation {duration: 50; easing.type: Easing.InOutBack}}
         color : "black"

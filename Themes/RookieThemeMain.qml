@@ -3,41 +3,50 @@ import QtQuick
 QtObject{
 
     //Bar
-    property color barBg: '#bf19120f'
-    property color barBorder: '#a28c85'
+    property color barBg:'#bf000000'
+    property color barBorder:'#000000'
+
 
     //Animated popup
-    property color popupCol: '#261e1b'
+    property color popupCol: '#171422'
+
+
+
+
 
    //Arrowshape
-    property color arrowborderCol: '#55433d'
-    property color arrowshapeCol: '#d47859'
-    Behavior on arrowshapeCol { 
-        ColorAnimation { duration: 500; easing.type: Easing.OutQuart } 
-    }
+    property color arrowborderCol:'#000000'
+    property color arrowshapeCol:'#434343'
     
+
+
+
+
+
     //Battery
-    property int batwidth: 120        
-    property int batheight: 30        
-    property int batspacing: 5        
-    property int batimgwidth: 21      
-    property int batimgheight: 21     
+    property int batwidth: 120        //removed
+    property int batheight: 30        //removed
+    property int batspacing: 5        //removed
+    property int batimgwidth: 21      //removed
+    property int batimgheight: 21     //removed
     property string batfontfamily: ""
-    // If battery text sits ON the arrow, use on_primary. If it sits on the bar, use on_surface.
-    property color battextCol: '#efdfda' 
+    property color battextCol: '#ffffff'
     property string batFont: fontFamily
     property int batfontsize: 14
 
+
+
+
+
     //Bluetooth
-    property int btwidth: 50           
-    property int btheight: 30          
-    property int btimgwidth: 20        
-    property int btimgheight: 20       
-    
+    property int btwidth: 50           //removed
+    property int btheight: 30          //removed
+    property int btimgwidth: 20        //removed
+    property int btimgheight: 20       //removed
     //Bluetooth Popup
-    property int btpopupwidth: 250     
-    property int btpopupheight: 220    
-    property int btmenugap: -2         
+    property int btpopupwidth: 250     //removed
+    property int btpopupheight: 220    //removed
+    property int btmenugap: -2         //removed
     property url btpopupbackground:  Qt.resolvedUrl("/mnt/data/Utility OG/Pictures/nierViolin.jpg")
     property bool btblurEnabled: true
     property double btblur: 0.6
@@ -47,35 +56,46 @@ QtObject{
     property double btimageopacity: 0.5
     property double btbrightness: 0.1
     property double btcolorization: 0.46
-    property color btcolorizationCol: '#19120f'
+    property color btcolorizationCol: '#000000'
     property string btFont: fontFamily
     property int btfontsize: 14
 
+
+
+
+
     //Clock
-    property color clocktextCol: '#efdfda'
+    property color clocktextCol: '#fdfdfd'
     property int clockfontsize: 14
     property string clkFont: fontFamily
 
+
+
+
+
     //CPU
-    property int cpuwidth: 120           
-    property int cpuheight: 30           
-    property int cpuspacing: 12          
-    property color cpuUsagetextCol: '#efdfda' 
+    property int cpuwidth: 120           //removed
+    property int cpuheight: 30           //removed
+    property int cpuspacing: 12          //removed
+    property color cpuUsagetextCol: '#ffffff' //Usage
     property int cpuUsagefontsize: 14
-    property color cpuTemptextcol: '#efdfda' 
+    property color cpuTemptextcol: '#ffffff' //Temperature
     property int cpuTempfontsize: 14
     property string cpuFont: fontFamily
 
+
+
+
+
     //InternetConns
-    property int intwidth: 50            
-    property int intheight: 30           
-    property int intimgwidth: 20         
-    property int intimgheight: 20        
-    
+    property int intwidth: 50            //removed
+    property int intheight: 30           //removed
+    property int intimgwidth: 20         //removed
+    property int intimgheight: 20        //removed
     //InternetConns Popup
-    property int intpopupwidth: 500      
-    property int intpopupheight: 300     
-    property int intmenugap: -2          
+    property int intpopupwidth: 500      //removed
+    property int intpopupheight: 300     //removed
+    property int intmenugap: -2          //removed
     property url intpopupbackground: Qt.resolvedUrl("/mnt/data/Utility OG/Pictures/download (3).gif")
     property bool intblurEnabled: true
     property double intblur: 0.6
@@ -85,35 +105,45 @@ QtObject{
     property double intimageopacity: 0.356
     property double intbrightness: 0.3
     property double intcolorization: 0.46
-    property color intcolorizationCol: '#19120f'
+    property color intcolorizationCol: '#171422'
     property string intFont: fontFamily
     
+
+
+
+
     //Mpris
-    property color mprisfontCol: '#efdfda'
+    property color mprisfontCol: '#fefefe'
     property string mprisFont: fontFamily
     property int mprisFontsize: 16
 
-    //PulseWire
-    property int pulsespacing: 10       
+
+
     
+
+    //PulseWire
+    property int pulsespacing: 10       //removed
     //Volume
     property int pulseVolfontsize: 14
-    property color pulseVolfontCol: '#efdfda'
+    property color pulseVolfontCol: '#ffffff'
     property string pulseFont: fontFamily
-    
     //Volume Db
     property int pulseDBfontsize: 14
-    property color pulseDBfontCol: '#efdfda'
+    property color pulseDBfontCol: '#ffffff'
     property string pulseDBFont: fontFamily
 
+
+
+
+
+
     //Tray
-    property int trayiconSpacing: 12     
-    property int trayiconHeight: 18      
-    property int trayiconWidth: 18       
-    
+    property int trayiconSpacing: 12     //removed
+    property int trayiconHeight: 18      //removed
+    property int trayiconWidth: 18       //removed
     //Tray Popup
-    property color traypopuptextCol: '#dac1ba'
-    property int traymenugap: -8         
+    property color traypopuptextCol: '#a6adc8'
+    property int traymenugap: -8         //removed
     property url traypopupbackground: Qt.resolvedUrl("/mnt/data/Utility OG/Pictures/download (59).jpeg")
     property bool trayblurEnabled: true
     property double trayblur: 0.6
@@ -123,13 +153,12 @@ QtObject{
     property double trayimageopacity: 0.6
     property double traybrightness: 0.0
     property double traycolorization: 0.4
-    property color traycolorizationCol: '#19120f'
+    property color traycolorizationCol: '#171422'
     property string trayFont: fontFamily
     property int trayFontSize: 16
-    
     //Tray ChildPopup
-    property color trayCpopuptextCol: '#dac1ba'
-    property int trayCmenugap: -12        
+    property color trayCpopuptextCol: '#a6adc8'
+    property int trayCmenugap: -12        //removed
     property url trayCpopupbackground: Qt.resolvedUrl("/mnt/data/Utility OG/Pictures/download (55).jpeg")
     property bool trayCblurEnabled: true
     property double trayCblur: 0.6
@@ -139,16 +168,22 @@ QtObject{
     property double trayCimageopacity: 0.6
     property double trayCbrightness: 0.0
     property double trayCcolorization: 0.4
-    property color trayCcolorizationCol: '#19120f'
+    property color trayCcolorizationCol: '#1e1e2e'
     property string trayCFont: fontFamily
     property int trayCFontSize: 16
 
+
+
+
     //WorkSpaces
-    property int workspaceSpacing: 12  
+    property int workspaceSpacing: 12  //removed
     property string workspaceFontFamily : fontFamily
 
-    //FONT STYLE
-    property color fontCol: '#efdfda'
+
+
+
+    //FONT STYLE COZ YUP(NO WORK HAS BEEN DONE ON THIS)
+    property color fontCol: '#ffffff'
     property string fontFamily: "Space Mono"
     property int fontSize: 14
 }
