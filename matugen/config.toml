@@ -1,0 +1,21 @@
+[config]
+
+[templates.quickshell]
+input_path = '/home/therookie/.config/quickshell/Themes/DefaultTheme.qml.template'
+output_path = '/home/therookie/.config/quickshell/Themes/DefaultTheme.qml'
+
+[templates.kitty]
+input_path = '/home/therookie/.config/matugen/kitty.conf.template'
+output_path = '/home/therookie/.config/kitty/matugen-colors.conf'
+
+[templates.gtk3]
+input_path = '/home/therookie/.config/matugen/gtk.css.template'
+output_path = '/home/therookie/.config/gtk-3.0/gtk.css'
+
+[templates.gtk4]
+input_path = '/home/therookie/.config/matugen/gtk.css.template'
+output_path = '/home/therookie/.config/gtk-4.0/gtk.css'
+
+[templates.neovim]
+input_path = '/home/therookie/.config/matugen/nvim.lua.template'
+output_path = '/home/therookie/.config/nvim/lua/matugen-colors.lua'
