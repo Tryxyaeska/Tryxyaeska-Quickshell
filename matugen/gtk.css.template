@@ -1,0 +1,79 @@
+@define-color accent_color {{colors.primary.default.hex}};
+@define-color accent_bg_color {{colors.primary.default.hex}};
+@define-color accent_fg_color {{colors.on_primary.default.hex}};
+@define-color window_bg_color {{colors.surface.default.hex}};
+@define-color window_fg_color {{colors.on_surface.default.hex}};
+@define-color view_bg_color {{colors.surface_container.default.hex}};
+@define-color view_fg_color {{colors.on_surface.default.hex}};
+@define-color headerbar_bg_color {{colors.surface_container.default.hex}};
+@define-color popover_bg_color {{colors.surface_container_highest.default.hex}};
+@define-color card_bg_color {{colors.surface_container_low.default.hex}};
+
+
+window, label, .view, .sidebar, text, textview {
+    color: {{colors.on_surface.default.hex}};
+}
+
+label:disabled, .dim-label {
+    color: {{colors.outline.default.hex}};
+}
+
+progressbar progress, levelbar block.filled, scale highlight {
+    background-color: {{colors.primary.default.hex}};
+    border-radius: 4px;
+    box-shadow: 0 0 10px {{colors.primary.default.hex}}, 
+                0 0 4px {{colors.primary.default.hex}};
+}
+
+progressbar trough, levelbar trough, scale trough {
+    background-color: {{colors.surface_container_highest.default.hex}};
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+}
+
+scale slider {
+    background-color: {{colors.on_primary.default.hex}};
+    border-radius: 50%;
+    border: 2px solid {{colors.primary.default.hex}};
+}
+
+scale slider:hover {
+    box-shadow: 0 0 12px {{colors.primary.default.hex}};
+    background-color: {{colors.primary.default.hex}};
+}
+
+
+*:selected, .view:selected, iconview:selected, treeview:selected, row:selected, .sidebar :selected {
+    background-color: {{colors.primary.default.hex}};
+    color: {{colors.on_primary.default.hex}};
+    border-radius: 6px; 
+}
+
+
+*:selected label, *:selected text, row:selected label, .sidebar :selected label, iconview:selected label {
+    color: {{colors.on_primary.default.hex}};
+    /* Optional: add a tiny text shadow so it pops even more */
+    text-shadow: 0px 1px 2px rgba(0,0,0,0.4);
+}
+
+
+*:selected:backdrop, .view:selected:backdrop, iconview:selected:backdrop {
+    background-color: {{colors.surface_container_highest.default.hex}};
+    color: {{colors.on_surface.default.hex}};
+}
+
+*:selected:backdrop label {
+    color: {{colors.on_surface.default.hex}};
+}
+
+@define-color theme_icon_color {{colors.on_surface.default.hex}};
+@define-color symbolic-icon-color {{colors.on_surface.default.hex}};
+
+.sidebar image {
+    color: {{colors.primary.default.hex}};
+}
+
+toolbar image:hover, headerbar image:hover {
+    color: {{colors.primary.default.hex}};   
+    filter: drop-shadow(0px 0px 4px {{colors.primary.default.hex}});
+}
