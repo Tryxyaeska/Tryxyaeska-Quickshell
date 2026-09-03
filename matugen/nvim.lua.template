@@ -1,0 +1,57 @@
+local colors = {
+    bg = "{{colors.surface.default.hex}}",
+    fg = "{{colors.on_surface.default.hex}}",
+    primary = "{{colors.primary.default.hex}}",
+    secondary = "{{colors.secondary.default.hex}}",
+    surface_container = "{{colors.surface_container.default.hex}}",
+    surface_highest = "{{colors.surface_container_highest.default.hex}}",
+    on_primary = "{{colors.on_primary.default.hex}}",
+    error = "{{colors.error.default.hex}}",
+}
+
+vim.o.termguicolors = true
+
+
+vim.api.nvim_set_hl(0, "Normal", { fg = colors.fg, bg = colors.bg })
+vim.api.nvim_set_hl(0, "NormalFloat", { fg = colors.fg, bg = colors.bg })
+vim.api.nvim_set_hl(0, "NormalNC", { fg = colors.fg, bg = colors.bg })
+vim.api.nvim_set_hl(0, "SignColumn", { bg = colors.bg })
+vim.api.nvim_set_hl(0, "LineNr", { fg = colors.surface_highest })
+vim.api.nvim_set_hl(0, "CursorLineNr", { fg = colors.primary, bold = true })
+vim.api.nvim_set_hl(0, "Visual", { bg = colors.surface_highest })
+
+
+vim.api.nvim_set_hl(0, "Pmenu", { bg = colors.surface_container, fg = colors.fg })
+vim.api.nvim_set_hl(0, "PmenuSel", { bg = colors.primary, fg = colors.on_primary })
+vim.api.nvim_set_hl(0, "StatusLine", { bg = colors.surface_container, fg = colors.fg })
+
+
+vim.api.nvim_set_hl(0, "String", { fg = colors.primary })
+vim.api.nvim_set_hl(0, "Function", { fg = colors.primary, bold = true })
+
+
+vim.api.nvim_set_hl(0, "FloatBorder", { fg = colors.primary, bg = colors.bg })
+vim.api.nvim_set_hl(0, "WinSeparator", { fg = colors.surface_highest })
+
+vim.api.nvim_set_hl(0, "NoiceCmdlinePopupBorder", { fg = colors.primary, bg = colors.bg })
+vim.api.nvim_set_hl(0, "NoiceCmdlinePopup", { bg = colors.bg })
+vim.api.nvim_set_hl(0, "NoiceCmdlinePopupBorderCmdline", { fg = colors.primary, bg = colors.bg })
+vim.api.nvim_set_hl(0, "MsgArea", { fg = colors.fg, bg = colors.bg })
+
+vim.api.nvim_set_hl(0, "SnacksIndent", { fg = colors.surface_highest })
+vim.api.nvim_set_hl(0, "SnacksIndentScope", { fg = colors.primary })
+
+vim.api.nvim_set_hl(0, "NeoTreeNormal", { fg = colors.fg, bg = colors.surface_container })
+vim.api.nvim_set_hl(0, "NeoTreeNormalNC", { fg = colors.fg, bg = colors.surface_container })
+vim.api.nvim_set_hl(0, "NeoTreeWinSeparator", { fg = colors.surface_container, bg = colors.surface_container })
+vim.api.nvim_set_hl(0, "NeoTreeGitModified", { fg = colors.secondary })
+vim.api.nvim_set_hl(0, "NeoTreeGitUntracked", { fg = colors.primary })
+
+
+vim.api.nvim_set_hl(0, "TelescopeBorder", { fg = colors.primary })
+vim.api.nvim_set_hl(0, "TelescopePromptBorder", { fg = colors.primary })
+vim.api.nvim_set_hl(0, "FzfLuaBorder", { fg = colors.primary })
+
+vim.api.nvim_set_hl(0, "DiagnosticError", { fg = colors.error })
+vim.api.nvim_set_hl(0, "DiagnosticWarn", { fg = colors.secondary })
+vim.api.nvim_set_hl(0, "DiagnosticInfo", { fg = colors.primary })
