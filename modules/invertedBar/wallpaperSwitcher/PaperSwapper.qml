@@ -98,7 +98,7 @@ Item{
 
         implicitWidth : visibility ? 1260 : 1260
         implicitHeight : visibility ? 200 : 200
-        Behavior on implicitWidth {NumberAnimation {duration: 120; easing.type: Easing.OutQuad}}
+        Behavior on implicitWidth {NumberAnimation {duration: 20; easing.type: Easing.OutQuad}}
         Behavior on implicitHeight {NumberAnimation {duration: 50; easing.type: Easing.OutQuad}}
         color : "transparent"
         exclusionMode : ExclusionMode.Ignore

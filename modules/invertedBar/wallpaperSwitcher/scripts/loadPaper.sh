@@ -10,7 +10,7 @@ if [ ! -f "$REAL_PATH" ]; then
     exit 1
 fi
 
-matugen image "$REAL_PATH" --source-color-index 0 --type scheme-fidelity
+matugen image "$REAL_PATH" --source-color-index 0 --type scheme-content
 awww img "$REAL_PATH" --transition-type random --transition-fps 60 --transition-step 2 -f Bilinear --transition-duration 0.5 &
 killall -SIGUSR1 kitty
 pkill -SIGUSR1 nvim
