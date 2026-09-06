@@ -73,7 +73,7 @@ Item {
             anchors.left: (!root.animatesLeft && root.popupAnchorEdges !== Edges.Bottom) ? parent.left : undefined
             anchors.horizontalCenter: (root.popupAnchorEdges === Edges.Bottom) ? parent.horizontalCenter : undefined
             
-            width: root.isOpen ? root.popupWidth : 0
+            width: root.isOpen ? root.popupWidth : root.popupWidth / 2
             height: root.isOpen ? root.popupHeight : 0
             opacity: root.isOpen ? 1 : 0
             
@@ -83,9 +83,9 @@ Item {
             border.width: 1
             border.color: "#FFFFFF"
 
-            Behavior on width { NumberAnimation { duration: 150; easing.type: Easing.OutQuad } }
-            Behavior on height { NumberAnimation { duration: 150; easing.type: Easing.OutQuad } }
-            Behavior on opacity { NumberAnimation { duration: 200; easing.type: Easing.OutQuart } }
+            Behavior on width { NumberAnimation { duration: 200; easing.type: Easing.OutQuad } }
+            Behavior on height { NumberAnimation { duration: 200; easing.type: Easing.OutQuad } }
+            Behavior on opacity { NumberAnimation { duration: 400; easing.type: Easing.OutQuart } }
 
             HoverHandler { id: popupHover }
 
