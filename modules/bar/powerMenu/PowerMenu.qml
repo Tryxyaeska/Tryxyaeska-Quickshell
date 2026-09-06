@@ -91,7 +91,7 @@ Item{
                     Image{
                         width: parent.width; height: parent.height; anchors.fill: parent
                         fillMode: Image.PreserveAspectCrop; smooth: true; mipmap: true; antialiasing: true;
-                        source: "/mnt/data/Utility OG/Pictures/destiny (4).jpg"; 
+                        source: "/home/therookie/Alliance2.0/Preservence/Utility OG/Pictures/destiny (4).jpg"; 
                         opacity: 0.433; layer.enabled: true
                         layer.effect: MultiEffect {
                             blurEnabled: true; blurMax: 8; blur: 0.6

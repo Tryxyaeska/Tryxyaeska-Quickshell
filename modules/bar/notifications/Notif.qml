@@ -97,7 +97,7 @@ Item{
                     Image {
                         width: parent.width; height: parent.height; anchors.fill: parent
                         fillMode: Image.PreserveAspectCrop; smooth: true; mipmap: true; antialiasing: true;
-                        source: "/mnt/data/Utility OG/Pictures/download (70) (Edited) (3).jpg"; 
+                        source: "/home/therookie/Alliance2.0/Preservence/Utility OG/Pictures/download (70) (Edited) (3).jpg"; 
                         opacity: 0.433; layer.enabled: true
                         layer.effect: MultiEffect {
                             blurEnabled: true; blurMax: 16; blur: 0.6
@@ -224,7 +224,7 @@ Item{
             height: parent.height 
             anchors.fill: parent
             fillMode: Image.PreserveAspectCrop; smooth: true; mipmap: true; antialiasing: true;
-            source: "/mnt/data/Utility OG/Pictures/bg-1.jpg"; 
+            source: "/home/therookie/Alliance2.0/Preservence/Utility OG/Pictures/bg-1.jpg"; 
             opacity: 0.6; layer.enabled: true
             layer.effect: MultiEffect {
                 blurEnabled: true; blurMax: 16; blur: 0.6
@@ -319,7 +319,7 @@ Item{
                             height: parent.height 
                             anchors.fill: parent
                             fillMode: Image.PreserveAspectCrop; smooth: true; mipmap: true; antialiasing: true;
-                            source: "/mnt/data/Utility OG/Pictures/download (70) (Edited) (3).jpg"; 
+                            source: "/home/therookie/Alliance2.0/Preservence/Utility OG/Pictures/download (70) (Edited) (3).jpg"; 
                             opacity: 0.433; layer.enabled: true
                             layer.effect: MultiEffect {
                                 blurEnabled: true; blurMax: 16; blur: 0.6

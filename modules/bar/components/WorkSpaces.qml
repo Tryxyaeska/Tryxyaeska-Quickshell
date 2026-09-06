@@ -65,12 +65,13 @@ ArrowShape{
                     height : 13
                     anchors.centerIn : parent.centerIn
                     anchors.verticalCenter : parent.verticalCenter
+                    color : "#000000"
 
                     Text{
                         opacity : workspaceArrowCursor.containsMouse ? 1 : 0
                         anchors.centerIn : parent
                         anchors.topMargin: -3
-                        color : "black"
+                        color : "white"
                         font.pixelSize : 11
                         text : modelData.name
                         font.bold : true
